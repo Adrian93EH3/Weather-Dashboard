@@ -41,7 +41,7 @@ header {
     border-width: thin;
   }
   
-  #weatherToday {
+  #todaysForecast {
     width: 80%;
     margin-top: 10px;
   }
