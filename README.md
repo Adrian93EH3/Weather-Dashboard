@@ -2,7 +2,7 @@
 <img src="./images/screenshot.png" alt="image_of_deployed_site">
 
 # Link To Site
-<link href="https://adrian93eh3.github.io/Weather-Dashboard/">
+https://adrian93eh3.github.io/Weather-Dashboard/
 
 # Acceptance Criteria
 GIVEN a weather dashboard with form inputs <br>
