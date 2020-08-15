@@ -1,6 +1,9 @@
 # Weather-Dashboard
 <img src="./images/screenshot.png" alt="image_of_deployed_site">
 
+# Link To Site
+<link href="https://adrian93eh3.github.io/Weather-Dashboard/">
+
 # Acceptance Criteria
 GIVEN a weather dashboard with form inputs <br>
 WHEN I search for a city <br>
@@ -15,4 +18,3 @@ WHEN I click on a city in the search history <br>
 THEN I am again presented with current and future conditions for that city <br>
 WHEN I open the weather dashboard <br>
 THEN I am presented with the last searched city forecast
-
