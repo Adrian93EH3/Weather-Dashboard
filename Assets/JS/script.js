@@ -9,7 +9,20 @@ $(document).ready(function() {
 
     // FUNCTIONALITY FOR THE SEARCH BUTTON
     $("#searchBtn").on("click", function() {
-});
+        if (saveCityList()) {
+            retrieveWeather(true);
+        };
+    });
+
+    $(document).on("click","td", function(e){
+        inputCity = e.target.innerHTML;
+        saveLastCitySearched(inputCity);
+        retrieveWeather(false);
+    });
+
+
+   
+
 
 });
 
