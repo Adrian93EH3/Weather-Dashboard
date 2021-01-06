@@ -1,5 +1,5 @@
 # Weather-Dashboard
-<img src="./images/screenshot.png" alt="image_of_deployed_site">
+Will come back for future development
 
 # Link To Site
 https://adrian93eh3.github.io/Weather-Dashboard/
