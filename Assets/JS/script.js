@@ -33,6 +33,46 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //GET THE CITY THAT THE USER INPUT. ALSO, ALERT USER IF THERE IS NOTHING IN THE INPUT FIELD
+    function getInputCity(){
+        inputCity = $("#searchInput").val().trim();
+        if (inputCity == "") {
+            alert("Please enter a city to search for.")
+            return false;
+        }
+        return true;
+        
+    }
+
 });
 
 
