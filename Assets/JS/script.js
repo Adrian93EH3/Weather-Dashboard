@@ -41,7 +41,8 @@ $(document).ready(function () {
 
             //MAKE SURE THE currentForecast ID IS EMPTY TO INPUT DATA
             $("#currentForecast").empty();
-           
+            //CREATE A NEW CARD BODY
+             var newDiv = $("<div>").addClass("card-body");
           });
     
     
