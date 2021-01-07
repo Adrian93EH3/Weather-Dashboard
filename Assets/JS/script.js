@@ -45,6 +45,8 @@ $(document).ready(function () {
              var newDiv = $("<div>").addClass("card-body");
              var newH4 = $("<h4>",{class: "card-title", text: inputCity + " (Current) "});
              var icon =todaysWeather.weather[0].icon;
+             //USES THE API's ICONS FOR WEATHER TO SHOW SUNNY, RAIN, CLOUDY, ETC
+             var iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
         });
     
     
