@@ -47,6 +47,8 @@ $(document).ready(function () {
              var icon =todaysWeather.weather[0].icon;
              //USES THE API's ICONS FOR WEATHER TO SHOW SUNNY, RAIN, CLOUDY, ETC
              var iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
+             //USES THE VARIABLE ABOVE AND ATTACHES IT TO A NEWLY CREATED IMG TAG AND USES THE SRC ATTR TO READ IT
+             var newI = $("<img>").attr("src", iconURL);
         });
     
     
