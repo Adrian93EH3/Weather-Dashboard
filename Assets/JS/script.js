@@ -57,6 +57,8 @@ $(document).ready(function () {
             //API USES KELVIN, HAD TO CONVERT TO FAHRENHEIT
             var kelvinToF = (presentForecast.main.temp - 273.15) * 1.80 + 32
             var newP1 = $("<p>",{class: "card-text", text: "Temperature: " + kelvinToF.toFixed(1) + " °F"});
+            var newP2 = $("<p>",{class: "card-text", text: "Humidity: " + presentForecast.main.humidity +"%"});
+            
             
         });
     
