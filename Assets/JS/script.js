@@ -44,13 +44,19 @@ $(document).ready(function () {
             //CREATE A NEW CARD BODY
              var newDiv = $("<div>").addClass("card-body");
              var newH4 = $("<h4>",{class: "card-title", text: inputCity + " (Current) "});
-             var icon =todaysWeather.weather[0].icon;
+             var icon = presentForecast.weather[0].icon;
              //USES THE API's ICONS FOR WEATHER TO SHOW SUNNY, RAIN, CLOUDY, ETC
              var iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
              //USES THE VARIABLE ABOVE AND ATTACHES IT TO A NEWLY CREATED IMG TAG AND USES THE SRC ATTR TO READ IT
              var newI = $("<img>").attr("src", iconURL);
              //ATTACHES THE NEW IMG ICON TO THE H4
              newH4.append(newI);
+
+            //EVERYTHING BELOW WILL BE ABOUT THE TEMP, HUMIDITY, WIND SPEED AND UV INDEX
+            
+            //API USES KELVIN, HAD TO CONVERT TO FAHRENHEIT
+            var kelvinToF = (presentForecast.main.temp - 273.15) * 1.80 + 32
+            
         });
     
     
