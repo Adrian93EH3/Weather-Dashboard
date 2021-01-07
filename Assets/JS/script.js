@@ -49,6 +49,8 @@ $(document).ready(function () {
              var iconURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
              //USES THE VARIABLE ABOVE AND ATTACHES IT TO A NEWLY CREATED IMG TAG AND USES THE SRC ATTR TO READ IT
              var newI = $("<img>").attr("src", iconURL);
+             //ATTACHES THE NEW IMG ICON TO THE H4
+             newH4.append(newI);
         });
     
     
