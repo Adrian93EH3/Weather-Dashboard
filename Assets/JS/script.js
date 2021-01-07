@@ -37,7 +37,12 @@ $(document).ready(function () {
         $.ajax({
             url: currentWeatherURL,
             method: "GET"
-          })
+          }).then(function(presentForecast) {
+
+            //MAKE SURE THE currentForecast ID IS EMPTY TO INPUT DATA
+            $("#currentForecast").empty();
+           
+          });
     
     
     };
