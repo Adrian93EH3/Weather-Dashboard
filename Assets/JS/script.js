@@ -27,11 +27,20 @@ $(document).ready(function () {
             getInputCity()
         }
         //OR IF THE CITY IS BEING RETRIEVED FROM LOCAL STORAGE, OR FROM LIST OF PREVIOUSLY SEARCHED CITIES
-        buildTodaysWeather();
-        buildFiveDayForecast();
+        currentForecast();
+        fiveDayForecast();
     };
 
+    function currentForecast () {
+        var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + inputCity +"&appid=" + APIKey;
 
+        $.ajax({
+            url: currentWeatherURL,
+            method: "GET"
+          })
+    
+    
+    };
 
 
 
