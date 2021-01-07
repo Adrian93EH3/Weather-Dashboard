@@ -43,7 +43,9 @@ $(document).ready(function () {
             $("#currentForecast").empty();
             //CREATE A NEW CARD BODY
              var newDiv = $("<div>").addClass("card-body");
-          });
+
+             var newH4 = $("<h4>",{class: "card-title", text: inputCity + " (Current) "});
+        });
     
     
     };
