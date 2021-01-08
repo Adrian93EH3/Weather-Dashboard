@@ -65,6 +65,9 @@ $(document).ready(function () {
             var latValue = todaysWeather.coord.lat;
             var lonValue = todaysWeather.coord.lon;
             var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + latValue + "&lon=" + lonValue;
+
+            //BEGINNING AJAX CALL AND FUNCTION TO RETRIEVE UV INFO
+            
         });
     
     
