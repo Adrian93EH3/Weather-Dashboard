@@ -63,6 +63,7 @@ $(document).ready(function () {
 
             //BEGINNING OF LAT&LON TO RETRIEVE THE UV USING ANOTHER API URL FROM OPENWEATHER
             var latValue = todaysWeather.coord.lat;
+            var lonValue = todaysWeather.coord.lon;
             
         });
     
