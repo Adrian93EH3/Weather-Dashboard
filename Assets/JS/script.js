@@ -60,6 +60,9 @@ $(document).ready(function () {
             var newP2 = $("<p>",{class: "card-text", text: "Humidity: " + presentForecast.main.humidity +"%"});
             var newP3 = $("<p>",{class: "card-text", text: "Wind Speed: " + presentForecast.wind.speed + " MPH"});
             var newP4 = $("<p>",{class: "card-text", text: "UV Index: "});
+
+            //BEGINNING OF LAT&LON TO RETRIEVE THE UV USING ANOTHER API URL FROM OPENWEATHER
+            
             
         });
     
