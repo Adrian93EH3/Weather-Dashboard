@@ -67,7 +67,10 @@ $(document).ready(function () {
             var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + latValue + "&lon=" + lonValue;
 
             //BEGINNING AJAX CALL AND FUNCTION TO RETRIEVE UV INFO
-            
+            $.ajax({
+                url: uvURL,
+                method: "GET"
+            })
         });
     
     
