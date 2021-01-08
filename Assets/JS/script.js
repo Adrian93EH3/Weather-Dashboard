@@ -73,7 +73,9 @@ $(document).ready(function () {
             }).then(function(uvWeather) {
                 
                 var uvValue = uvWeather.value;
-                
+
+
+                //GOING TO ASSIGN UV COLORS BASED ON THE UV INDEX VALUE
             });
         });
     
