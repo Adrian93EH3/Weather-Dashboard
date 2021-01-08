@@ -76,6 +76,9 @@ $(document).ready(function () {
 
 
                 //GOING TO ASSIGN UV COLORS BASED ON THE UV INDEX VALUE
+                if (uvValue < 3){
+                    uvColor = "lowuv"
+                }
             });
         });
     
