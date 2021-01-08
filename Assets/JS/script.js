@@ -70,7 +70,11 @@ $(document).ready(function () {
             $.ajax({
                 url: uvURL,
                 method: "GET"
-            })
+            }).then(function(uvWeather) {
+                
+                var uvValue = uvWeather.value;
+                
+            });
         });
     
     
