@@ -87,7 +87,10 @@ $(document).ready(function () {
                 }
                 else if (uvValue < 11){
                     uvColor = "veryhighuv"                    
-                }     
+                }
+                else {
+                    uvColor = "extremelyhighuv"                    
+                };
             });
         });
     
