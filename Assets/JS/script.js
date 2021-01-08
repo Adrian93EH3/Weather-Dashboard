@@ -62,7 +62,7 @@ $(document).ready(function () {
             var newP4 = $("<p>",{class: "card-text", text: "UV Index: "});
 
             //BEGINNING OF LAT&LON TO RETRIEVE THE UV USING ANOTHER API URL FROM OPENWEATHER
-            
+            var latValue = todaysWeather.coord.lat;
             
         });
     
