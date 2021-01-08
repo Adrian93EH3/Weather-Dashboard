@@ -82,6 +82,9 @@ $(document).ready(function () {
                 else if (uvValue < 6){
                     uvColor = "mediumuv"                    
                 }
+                else if (uvValue < 8){
+                    uvColor = "highuv"                    
+                }         
             });
         });
     
