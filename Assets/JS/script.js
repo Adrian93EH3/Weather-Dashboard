@@ -84,7 +84,10 @@ $(document).ready(function () {
                 }
                 else if (uvValue < 8){
                     uvColor = "highuv"                    
-                }         
+                }
+                else if (uvValue < 11){
+                    uvColor = "veryhighuv"                    
+                }     
             });
         });
     
