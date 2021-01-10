@@ -43,10 +43,10 @@ $(document).ready(function () {
     };
 
     function currentForecast () {
-        var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + inputCity +"&appid=" + APIKey;
+        var currentForecastURL = "https://api.openweathermap.org/data/2.5/weather?q=" + inputCity +"&appid=" + APIKey;
 
         $.ajax({
-            url: currentWeatherURL,
+            url: currentForecastURL,
             method: "GET"
           }).then(function(presentForecast) {
 
