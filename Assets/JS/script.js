@@ -113,7 +113,9 @@ $(document).ready(function () {
         });
 
         //BEGINNING OF THE FIVE DAY FORECAST
-    
+        function fiveDayForecast () {
+
+            var fiveDayForecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + inputCity + "&appid=" + APIKey;
     
     };
 
