@@ -93,7 +93,8 @@ $(document).ready(function () {
                 };
 
                 //ATTACHING THE UV COLORS TO THE DIV CREATED ON LINE 45
-                var newSpan = $("<span>",{class: uvColor, text: uvValue});  
+                var newSpan = $("<span>",{class: uvColor, text: uvValue});
+                newP4.append(newSpan);
             });
         });
     
