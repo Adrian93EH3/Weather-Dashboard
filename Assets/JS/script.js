@@ -116,7 +116,13 @@ $(document).ready(function () {
         function fiveDayForecast () {
 
             var fiveDayForecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + inputCity + "&appid=" + APIKey;
-    
+            
+            //AJAX CALL
+            $.ajax({
+            url: fiveDayForecastURL,
+            method: "GET"
+          })
+        }
     };
 
 
