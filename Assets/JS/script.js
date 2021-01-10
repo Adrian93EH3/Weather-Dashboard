@@ -96,6 +96,8 @@ $(document).ready(function () {
                 var newSpan = $("<span>",{class: uvColor, text: uvValue});
                 newP4.append(newSpan);
                 newDiv.append(newH4, newP1, newP2, newP3, newP4);
+                $("#currentForecast").append(newDiv);
+
             });
         });
     
