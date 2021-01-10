@@ -123,7 +123,10 @@ $(document).ready(function () {
             method: "GET"
           }).then(function(fullForecast) {
             console.log(fullForecast);
-        
+            $("#currentForecast").empty();
+            $("#futureForecast").empty();        
+    
+            $("#fiveDayForecast").text("Five Day Forecast");
     };
 
 
