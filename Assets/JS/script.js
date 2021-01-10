@@ -95,6 +95,7 @@ $(document).ready(function () {
                 //ATTACHING THE UV COLORS TO THE DIV CREATED ON LINE 45
                 var newSpan = $("<span>",{class: uvColor, text: uvValue});
                 newP4.append(newSpan);
+                newDiv.append(newH4, newP1, newP2, newP3, newP4);
             });
         });
     
