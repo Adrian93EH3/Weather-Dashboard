@@ -121,8 +121,9 @@ $(document).ready(function () {
             $.ajax({
             url: fiveDayForecastURL,
             method: "GET"
-          })
-        }
+          }).then(function(fullForecast) {
+            console.log(fullForecast);
+        
     };
 
 
