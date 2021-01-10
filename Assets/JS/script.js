@@ -10,7 +10,7 @@ $(document).ready(function () {
     // FUNCTIONALITY FOR THE SEARCH BUTTON
     $("#searchBtn").on("click", function () {
         if (saveCityList()) {
-            retrieveWeather(true);
+            retrieveForecast(true);
         };
     });
     
@@ -28,12 +28,12 @@ $(document).ready(function () {
     $(document).on("click", "td", function (e) {
         inputCity = e.target.innerHTML;
         saveLastCitySearched(inputCity);
-        retrieveWeather(false);
+        retrieveForecast(false);
     });
 
     //THIS FUNCTION IS USED TO RETRIEVE THE WEATHER.  THE 'NEEDCITY' ARGUMENT IS USED
     //TO DETERMINE IF THE CITY HAS BEEN INPUT BY THE USER
-    function retrieveWeather(needCity) {
+    function retrieveForecast(needCity) {
         if (needCity) {
             getInputCity()
         }
