@@ -91,6 +91,8 @@ $(document).ready(function () {
                 else {
                     uvColor = "extremelyhighuv"                    
                 };
+
+                //ATTACHING THE UV COLORS TO THE DIV CREATED ON LINE 45
             });
         });
     
