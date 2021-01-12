@@ -1,6 +1,4 @@
 // BEGINNING OF JS FILE
-
-
 $(document).ready(function () {
     // INPUT FIELD IS BLANK SO USER CAN ENTER THE CITY THEY WANT A FORECAST FOR
     var inputCity = "";
@@ -16,23 +14,26 @@ $(document).ready(function () {
         };
     });
 
-    //GET THE CITY THAT THE USER INPUT. ALSO, ALERT USER IF THERE IS NOTHING IN THE INPUT FIELD
-    function getInputCity() {
-        inputCity = $("#searchInput").val().trim();
-        if (inputCity == "") {
-            alert("Please enter a city to search for.")
-            return false;
-        }
-        return true;
+    
 
-    }
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
     $(document).on("click", "td", function (e) {
         inputCity = e.target.innerHTML;
         saveLastCitySearched(inputCity);
         retrieveForecast(false);
     });
 
+    
+    
+    
     //THIS FUNCTION IS USED TO RETRIEVE THE WEATHER.  THE 'NEEDCITY' ARGUMENT IS USED
     //TO DETERMINE IF THE CITY HAS BEEN INPUT BY THE USER
     function retrieveForecast(needCity) {
@@ -44,6 +45,9 @@ $(document).ready(function () {
         fiveDayForecast();
     };
 
+    
+    
+    
     function currentForecast() {
         var currentForecastURL = "https://api.openweathermap.org/data/2.5/weather?q=" + inputCity + "&appid=" + APIKey;
 
@@ -186,6 +190,19 @@ $(document).ready(function () {
     function retrieveLastCitySearched(){
         return localStorage.getItem("lastCitySearched");
     };    
+
+    
+    
+    //GET THE CITY THAT THE USER INPUT. ALSO, ALERT USER IF THERE IS NOTHING IN THE INPUT FIELD
+    function getInputCity() {
+        inputCity = $("#searchInput").val().trim();
+        if (inputCity == "") {
+            alert("Please enter a city to search for.")
+            return false;
+        }
+        return true;
+
+    }
 
     //AS A USER CONTINUES TO SEARCH CITIES, SAVE THEM INTO AN ARRAY LOCALLY SO THAT THEY'RE IN ORDER IN THE LIST
     function saveCityList() {        
