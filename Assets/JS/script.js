@@ -62,8 +62,8 @@ $(document).ready(function () {
             var newP4 = $("<p>", { class: "card-text", text: "UV Index: " });
 
             //BEGINNING OF LAT&LON TO RETRIEVE THE UV USING ANOTHER API URL FROM OPENWEATHER
-            var latValue = todaysWeather.coord.lat;
-            var lonValue = todaysWeather.coord.lon;
+            var latValue = presentForecast.coord.lat;
+            var lonValue = presentForecast.coord.lon;
             var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + latValue + "&lon=" + lonValue;
 
             //BEGINNING AJAX CALL AND FUNCTION TO RETRIEVE UV INFO
