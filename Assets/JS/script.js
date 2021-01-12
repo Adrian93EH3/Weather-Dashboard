@@ -155,7 +155,7 @@ $(document).ready(function () {
             var newI = $("<img>").attr("src", iconURL);
             //GRAB THE TEMP AND HUMIDITY AS WELL
             var tempFromKelvin = (fullForecast.list[i].main.temp - 273.15) * 1.80 + 32
-            var newP1 = $("<p>", { class: "card-text", text: "Temp: " + tempFromKelvin.toFixed(1) + " °F" }); //  alt 0 1 7 6
+            var newP1 = $("<p>", { class: "card-text", text: "Temp: " + tempFromKelvin.toFixed(1) + " °F" });
             var newP2 = $("<p>", { class: "card-text", text: "Humidity: " + fullForecast.list[i].main.humidity + "%" });
             newDiv.append(newH5, newI, newP1, newP2);
             $(newCard).append(newDiv);
