@@ -130,6 +130,10 @@ $(document).ready(function () {
 
             $("#fiveDayForecast").text("Five Day Forecast");
         });
+
+        //THE INFORMATION OF THAT THE API GIVES IS BASED ON THE TIME THE API IS CALLED, SO I'LL BE SETTING IT TO 3PM MILITARY TIME SO THAT THE FORECAST IS BASED OFF
+        //3PM//15:00 FOR EACH DAY ON EACH CARD FOR EVERY POPULATED CITY THE USER INPUTS
+        
     };
 
 
