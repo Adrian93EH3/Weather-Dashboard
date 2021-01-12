@@ -187,6 +187,27 @@ $(document).ready(function () {
         return localStorage.getItem("lastCitySearched");
     };    
 
+    //AS A USER CONTINUES TO SEARCH CITIES, SAVE THEM INTO AN ARRAY LOCALLY SO THAT THEY'RE IN ORDER IN THE LIST
+    function saveCityList() {        
+
+        if (getInputCity()) {
+            var cities = JSON.parse(window.localStorage.getItem('citiesPreviouslySearched'));
+            if (cities === null) {
+                cities = [];
+            }
+            //IF THE CITY THAT WAS MOST RECENTLY SEARCHED IS ALREADY IN THE LIST OF SAVED CITIES, NO NEED TO SAVE AGAIN
+            if (cities.indexOf(inputCity) == -1) {
+                cities.push(inputCity);
+                localStorage.setItem("citiesPreviouslySearched", JSON.stringify(cities));
+                retrievePreviouslySearchedList();
+            };         
+            //MOVES THE CITY THAT WAS DUPLICATED TO THE TOP OF THE ARRAY/LIST
+            saveLastCitySearched(inputCity);
+            return true;
+        };        
+        return false;
+
+    }
 
 
 
