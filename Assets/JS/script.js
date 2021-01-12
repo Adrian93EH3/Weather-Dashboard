@@ -7,7 +7,7 @@ $(document).ready(function () {
     // APIKEY FOR OPENWEATHERMAP API
     var APIKey = "ff190912e73db2be11befe0e9575b205";
 
-    
+
 
     // FUNCTIONALITY FOR THE SEARCH BUTTON
     $("#searchBtn").on("click", function () {
@@ -167,6 +167,8 @@ $(document).ready(function () {
 
     }
 
+
+    //INITIALIZED THE DOCUMENT, BRING ANY PREVIOUSLY SEARCHED CITES FROM LOCAL STORAGE, AND LOAD LAST SEARCHED CITY
     function initDoc() {
         retrievePreviouslySearchedList();
         inputCity = retrieveLastCitySearched();
