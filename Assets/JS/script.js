@@ -19,7 +19,7 @@ $(document).ready(function () {
         saveLastCitySearched(inputCity);
         retrieveForecast(false);
     });
-    
+
     //THIS FUNCTION IS USED TO RETRIEVE THE WEATHER.  THE 'NEEDCITY' ARGUMENT IS USED
     //TO DETERMINE IF THE CITY HAS BEEN INPUT BY THE USER
     function retrieveForecast(needCity) {
@@ -118,40 +118,39 @@ $(document).ready(function () {
             $("#fiveDayForecast").empty();
 
             $("#futureForecast").text("Five Day Forecast");
-        });
 
-        //THE INFORMATION OF THAT THE API GIVES IS BASED ON THE TIME THE API IS CALLED, SO I'LL BE SETTING IT TO 3PM MILITARY TIME SO THAT THE FORECAST IS BASED OFF
-        //3PM//15:00 FOR EACH DAY ON EACH CARD FOR EVERY POPULATED CITY THE USER INPUTS
-        var time3PM = 0;
-        for (i = 0; i < 8; i++) {
-            if (fullForecast.list[i].dt_txt.includes("15:00:00")) {
-                time3PM = i;
-                break;
+            //THE INFORMATION OF THAT THE API GIVES IS BASED ON THE TIME THE API IS CALLED, SO I'LL BE SETTING IT TO 3PM MILITARY TIME SO THAT THE FORECAST IS BASED OFF
+            //3PM//15:00 FOR EACH DAY ON EACH CARD FOR EVERY POPULATED CITY THE USER INPUTS
+            var time3PM = 0;
+            for (i = 0; i < 8; i++) {
+                if (fullForecast.list[i].dt_txt.includes("15:00:00")) {
+                    time3PM = i;
+                    break;
+                }
             }
-        }
 
 
-        //USE THE 3PM VARIABLE AND CREATE 5 CARDS FOR THE 5 DAY FORECAST. THE API POPULATES DATA FOR EVERY 3 HRS OF A DAY
-        for (i = time3PM; i < 40; i += 8) {
-            var section = "#section" + i;
-            var newSection = $("<section>", { class: "col-lg-2", id: section });
-            var newCard = $("<div>").addClass("card bg-primary text-white");
-            var newDiv = $("<div>").addClass("card-body");
-            var newH5 = $("<h5>", { class: "card-title", text: moment(fullForecast.list[i].dt_txt).format('MM/DD/YYYY') });
-            //GRAB THE WEATHER ICON AND USE IT IN THE CARD
-            var icon = fullForecast.list[i].weather[0].icon;
-            var iconURL = "https://openweathermap.org/img/wn/" + icon + ".png"
-            var newI = $("<img>").attr("src", iconURL);
-            //GRAB THE TEMP AND HUMIDITY AS WELL
-            var kelvinToF = (fullForecast.list[i].main.temp - 273.15) * 1.80 + 32
-            var newP1 = $("<p>", { class: "card-text", text: "Temp: " + kelvinToF.toFixed(1) + " °F" });
-            var newP2 = $("<p>", { class: "card-text", text: "Humidity: " + fullForecast.list[i].main.humidity + "%" });
-            newDiv.append(newH5, newI, newP1, newP2);
-            $(newCard).append(newDiv);
-            $(newSection).append(newCard);
-            $("#fivedaysection").append(newSection);
-        }
-
+            //USE THE 3PM VARIABLE AND CREATE 5 CARDS FOR THE 5 DAY FORECAST. THE API POPULATES DATA FOR EVERY 3 HRS OF A DAY
+            for (i = time3PM; i < 40; i += 8) {
+                var section = "#section" + i;
+                var newSection = $("<section>", { class: "col-lg-2", id: section });
+                var newCard = $("<div>").addClass("card bg-primary text-white");
+                var newDiv = $("<div>").addClass("card-body");
+                var newH5 = $("<h5>", { class: "card-title", text: moment(fullForecast.list[i].dt_txt).format('MM/DD/YYYY') });
+                //GRAB THE WEATHER ICON AND USE IT IN THE CARD
+                var icon = fullForecast.list[i].weather[0].icon;
+                var iconURL = "https://openweathermap.org/img/wn/" + icon + ".png"
+                var newI = $("<img>").attr("src", iconURL);
+                //GRAB THE TEMP AND HUMIDITY AS WELL
+                var kelvinToF = (fullForecast.list[i].main.temp - 273.15) * 1.80 + 32
+                var newP1 = $("<p>", { class: "card-text", text: "Temp: " + kelvinToF.toFixed(1) + " °F" });
+                var newP2 = $("<p>", { class: "card-text", text: "Humidity: " + fullForecast.list[i].main.humidity + "%" });
+                newDiv.append(newH5, newI, newP1, newP2);
+                $(newCard).append(newDiv);
+                $(newSection).append(newCard);
+                $("#fivedaysection").append(newSection);
+            }
+        })
     }
 
 
@@ -165,17 +164,17 @@ $(document).ready(function () {
     };
 
     //SAVE EVERY CITY THAT IS SEARCHED TO LOCAL STORAGE
-    function saveLastCitySearched(cityName){
+    function saveLastCitySearched(cityName) {
         localStorage.setItem("lastCitySearched", cityName);
     };
 
     //GRAB EVERY CITY SEARCHED FROM LOCAL STORAGE
-    function retrieveLastCitySearched(){
+    function retrieveLastCitySearched() {
         return localStorage.getItem("lastCitySearched");
-    };    
+    };
 
-    
-    
+
+
     //GET THE CITY THAT THE USER INPUT. ALSO, ALERT USER IF THERE IS NOTHING IN THE INPUT FIELD
     function getInputCity() {
         inputCity = $("#searchInput").val().trim();
@@ -188,7 +187,7 @@ $(document).ready(function () {
     }
 
     //AS A USER CONTINUES TO SEARCH CITIES, SAVE THEM INTO AN ARRAY LOCALLY SO THAT THEY'RE IN ORDER IN THE LIST
-    function saveCityList() {        
+    function saveCityList() {
 
         if (getInputCity()) {
             var cities = JSON.parse(window.localStorage.getItem('citiesPreviouslySearched'));
@@ -200,27 +199,27 @@ $(document).ready(function () {
                 cities.push(inputCity);
                 localStorage.setItem("citiesPreviouslySearched", JSON.stringify(cities));
                 retrievePreviouslySearchedList();
-            };         
+            };
             //MOVES THE CITY THAT WAS DUPLICATED TO THE TOP OF THE ARRAY/LIST
             saveLastCitySearched(inputCity);
             return true;
-        };        
+        };
         return false;
 
     }
 
     //EMPTY THE TABLE AND INSERT EVERY PREVIOUSLY SEARCHED CITY INTO THE TABLE
-    function retrievePreviouslySearchedList(){
+    function retrievePreviouslySearchedList() {
         $("tbody").empty();
         var cities = JSON.parse(window.localStorage.getItem('citiesPreviouslySearched'));
         if (cities != null) {
             for (i = 0; i < cities.length; i++) {
                 var newTR = $("<tr>");
                 var citySearched = $("<td>").text(cities[i]);
-                newTR.append(citySearched)      
-                $("tbody").append(newTR);                
+                newTR.append(citySearched)
+                $("tbody").append(newTR);
             }
-        } 
+        }
     }
 
 
