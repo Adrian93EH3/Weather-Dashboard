@@ -14,25 +14,11 @@ $(document).ready(function () {
         };
     });
 
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
     $(document).on("click", "td", function (e) {
         inputCity = e.target.innerHTML;
         saveLastCitySearched(inputCity);
         retrieveForecast(false);
     });
-
-    
-    
     
     //THIS FUNCTION IS USED TO RETRIEVE THE WEATHER.  THE 'NEEDCITY' ARGUMENT IS USED
     //TO DETERMINE IF THE CITY HAS BEEN INPUT BY THE USER
@@ -45,9 +31,6 @@ $(document).ready(function () {
         fiveDayForecast();
     };
 
-    
-    
-    
     function currentForecast() {
         var currentForecastURL = "https://api.openweathermap.org/data/2.5/weather?q=" + inputCity + "&appid=" + APIKey;
 
