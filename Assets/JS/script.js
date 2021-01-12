@@ -150,7 +150,8 @@ $(document).ready(function () {
                 $(newSection).append(newCard);
                 $("#fiveDayForecast").append(newSection);
             }
-        })
+        });
+
     }
 
 
