@@ -114,10 +114,10 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (fullForecast) {
             console.log(fullForecast);
-            $("#currentForecast").empty();
             $("#futureForecast").empty();
+            $("#fiveDayForecast").empty();
 
-            $("#fiveDayForecast").text("Five Day Forecast");
+            $("#futureForecast").text("Five Day Forecast");
         });
 
         //THE INFORMATION OF THAT THE API GIVES IS BASED ON THE TIME THE API IS CALLED, SO I'LL BE SETTING IT TO 3PM MILITARY TIME SO THAT THE FORECAST IS BASED OFF
