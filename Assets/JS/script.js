@@ -209,60 +209,19 @@ $(document).ready(function () {
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //EMPTY THE TABLE AND INSERT EVERY PREVIOUSLY SEARCHED CITY INTO THE TABLE
+    function retrievePreviouslySearchedList(){
+        $("tbody").empty();
+        var cities = JSON.parse(window.localStorage.getItem('citiesPreviouslySearched'));
+        if (cities != null) {
+            for (i = 0; i < cities.length; i++) {
+                var newTR = $("<tr>");
+                var citySearched = $("<td>").text(cities[i]);
+                newTR.append(citySearched)      
+                $("tbody").append(newTR);                
+            }
+        } 
+    }
 
 
 
