@@ -135,7 +135,11 @@ $(document).ready(function () {
         //3PM//15:00 FOR EACH DAY ON EACH CARD FOR EVERY POPULATED CITY THE USER INPUTS
         var time3PM = 0;
         for (i = 0; i < 8; i++) {
-            if (fullForecast.list[i].dt_txt.includes("15:00:00"))
+            if (fullForecast.list[i].dt_txt.includes("15:00:00")) {
+                time3PM = i;
+                break;
+            }
+        }
     };
 
 
