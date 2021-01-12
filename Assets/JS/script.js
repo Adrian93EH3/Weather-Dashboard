@@ -140,7 +140,61 @@ $(document).ready(function () {
                 break;
             }
         }
-    };
+
+
+        //USE THE 3PM VARIABLE AND CREATE 5 CARDS FOR THE 5 DAY FORECAST. THE API POPULATES DATA FOR EVERY 3 HRS OF A DAY
+        for (i = time3PM; i < 40; i += 8) {
+            var section = "#section" + i;
+            var newSection = $("<section>", { class: "col-lg-2", id: section });
+            var newCard = $("<div>").addClass("card bg-primary text-white");
+            var newDiv = $("<div>").addClass("card-body");
+            var newH5 = $("<h5>", { class: "card-title", text: moment(fullForecast.list[i].dt_txt).format('MM/DD/YYYY') });
+            //GRAB THE WEATHER ICON AND USE IT IN THE CARD
+            var icon = fullForecast.list[i].weather[0].icon;
+            var iconURL = "https://openweathermap.org/img/wn/" + icon + ".png"
+            var newI = $("<img>").attr("src", iconURL);
+            //GRAB THE TEMP AND HUMIDITY AS WELL
+            var tempFromKelvin = (fullForecast.list[i].main.temp - 273.15) * 1.80 + 32
+            var newP1 = $("<p>", { class: "card-text", text: "Temp: " + tempFromKelvin.toFixed(1) + " °F" }); //  alt 0 1 7 6
+            var newP2 = $("<p>", { class: "card-text", text: "Humidity: " + fullForecast.list[i].main.humidity + "%" });
+            newDiv.append(newH5, newI, newP1, newP2);
+            $(newCard).append(newDiv);
+            $(newSection).append(newCard);
+            $("#fivedaysection").append(newSection);
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -174,33 +228,4 @@ $(document).ready(function () {
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// END OF JS FILE
+ // END OF JS FILE
