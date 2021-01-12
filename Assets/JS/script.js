@@ -148,7 +148,7 @@ $(document).ready(function () {
                 newDiv.append(newH5, newI, newP1, newP2);
                 $(newCard).append(newDiv);
                 $(newSection).append(newCard);
-                $("#fivedaysection").append(newSection);
+                $("#fiveDayForecast").append(newSection);
             }
         })
     }
