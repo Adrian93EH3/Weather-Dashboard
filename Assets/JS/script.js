@@ -177,6 +177,10 @@ $(document).ready(function () {
         }
     };
 
+    //SAVE EVERY CITY THAT IS SEARCHED TO LOCAL STORAGE
+    function saveLastCitySearched(cityName){
+        localStorage.setItem("lastCitySearched", cityName);
+    };
 
 
 
