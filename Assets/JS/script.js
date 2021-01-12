@@ -3,7 +3,7 @@
 
 $(document).ready(function () {
     // INPUT FIELD IS BLANK SO USER CAN ENTER THE CITY THEY WANT A FORECAST FOR
-    var searchCity = "";
+    var inputCity = "";
     // APIKEY FOR OPENWEATHERMAP API
     var APIKey = "ff190912e73db2be11befe0e9575b205";
 
