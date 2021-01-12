@@ -173,7 +173,7 @@ $(document).ready(function () {
         retrievePreviouslySearchedList();
         inputCity = retrieveLastCitySearched();
         if (inputCity != null) {
-            retrieveWeather(false);
+            retrieveForecast(false);
         }
     };
 
