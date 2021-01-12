@@ -182,7 +182,10 @@ $(document).ready(function () {
         localStorage.setItem("lastCitySearched", cityName);
     };
 
-
+    //GRAB EVERY CITY SEARCHED FROM LOCAL STORAGE
+    function retrieveLastCitySearched(){
+        return localStorage.getItem("lastCitySearched");
+    };    
 
 
 
